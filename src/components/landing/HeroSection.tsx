@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 
 // Import demo components
 import MarketResearchDemo from "@/components/landing/demos/MarketResearchDemo"
-import CompanyResearchDemo from "@/components/landing/demos/CompanyResearchDemo"
+import DeepResearchDemo from "@/components/landing/demos/DeepResearchDemo"
 import AIAssistantDemo from "@/components/landing/demos/AIAssistantDemo"
 import CRMDemo from "@/components/landing/demos/CRMDemo"
 
@@ -15,32 +15,32 @@ const TABS = [
   {
     id: "market",
     label: "Pazar Araştırması",
-    title: "Potansiyel Alıcıları Bulun",
-    description: "Hedef ülkenizi seçin. Yapay zeka binlerce veri noktasını tarar ve size en uygun yüzlerce potansiyel alıcıyı listeler.",
+    title: "50-200+ Potansiyel Alıcı",
+    description: "Hedef ülke ve sektörü seçin. AI 75-120 özel sorgu çalıştırır, her firmayı 0-100 puanlar.",
     visual: <MarketResearchDemo />,
     icon: Globe
   },
   {
-    id: "company",
-    label: "Şirket Araştırması",
-    title: "Derinlemesine İstihbarat",
-    description: "Sadece isim listesi değil; üretim kapasitesinden karar vericilere kadar her detay tek kartta.",
-    visual: <CompanyResearchDemo />,
+    id: "deep",
+    label: "Derin Araştırma",
+    title: "6 Aşamalı İstihbarat",
+    description: "Karar vericiler, öncelikler, son gelişmeler ve yaklaşım stratejisi. 4-8 saat yerine 5 dakika.",
+    visual: <DeepResearchDemo />,
     icon: BarChart3
   },
   {
     id: "assistant",
-    label: "Yardımcı Yapay Zeka",
-    title: "Size Özel Satış Temsilciniz",
-    description: "Yapay zeka asistanınız, bulduğunuz firma için özel bir oyun planı hazırlar ve içerik üretir.",
+    label: "AI Satış Asistanı",
+    title: "İçerik Üretimi",
+    description: "Firma bağlamını yükleyin, Türkçe sorun. E-posta, LinkedIn mesajı ve satış stratejisi anında hazır.",
     visual: <AIAssistantDemo />,
     icon: Bot
   },
   {
     id: "crm",
-    label: "Müşteri Takip Sistemi",
-    title: "Süreci Tek Ekranda Yönetin",
-    description: "Bulduğunuz müşterileri dahili CRM'e ekleyin. Kiminle hangi aşamadasınız, ne zaman aramanız gerekiyor?",
+    label: "CRM",
+    title: "Pipeline Yönetimi",
+    description: "Araştırmadan gelen firmalar tek tıkla CRM'e. Aktivite takibi, hatırlatıcılar, süreç yönetimi.",
     visual: <CRMDemo />,
     icon: Briefcase
   }
@@ -78,10 +78,10 @@ export default function HeroSection() {
             </span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-12 h-auto lg:h-[600px]">
-            
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-12 h-auto lg:h-[680px]">
+
             {/* LEFT COLUMN: Copy & Navigation */}
-            <div className="lg:col-span-5 flex flex-col h-full relative z-10">
+            <div className="lg:col-span-4 flex flex-col h-full relative z-10">
                 
                 <h1 className="text-[40px] leading-[110%] lg:text-[64px] font-normal tracking-[-0.18rem] text-neutral-950 mb-8">
                     Doğru alıcıyı bulun. <br/>
@@ -151,14 +151,14 @@ export default function HeroSection() {
             </div>
 
             {/* RIGHT COLUMN: The Visual Display */}
-            <div className="lg:col-span-7 h-[450px] lg:h-full relative">
+            <div className="lg:col-span-8 h-[500px] lg:h-full relative">
                 {/* Dashed Border Container */}
-                <div className="absolute inset-0 border border-dashed border-neutral-300 rounded-xl bg-[#FAFAFA] p-6 lg:p-8 flex flex-col overflow-hidden">
-                    
+                <div className="absolute inset-0 border border-dashed border-neutral-300 rounded-xl bg-[#FAFAFA] p-4 lg:p-5 flex flex-col overflow-hidden">
+
                     {/* Visual Browser Window Wrapper */}
                     <div className="relative flex-1 w-full h-full shadow-2xl shadow-neutral-200/50 rounded-lg bg-white overflow-hidden flex flex-col border border-neutral-200">
                          {/* Visual Top Bar */}
-                         <div className="h-9 bg-neutral-50 border-b border-neutral-100 flex items-center px-4 gap-2 shrink-0">
+                         <div className="h-8 bg-neutral-50 border-b border-neutral-100 flex items-center px-4 gap-2 shrink-0">
                             <div className="flex gap-1.5">
                                 <div className="size-2.5 rounded-full bg-neutral-300" />
                                 <div className="size-2.5 rounded-full bg-neutral-300" />
@@ -170,9 +170,9 @@ export default function HeroSection() {
                          </div>
 
                          {/* Content Switcher */}
-                         <div className="relative flex-1 bg-white overflow-hidden p-2 sm:p-4">
+                         <div className="relative flex-1 bg-white overflow-hidden p-2">
                             <AnimatePresence mode="wait">
-                                <motion.div 
+                                <motion.div
                                     key={activeTab}
                                     initial={{ opacity: 0, scale: 0.98 }}
                                     animate={{ opacity: 1, scale: 1 }}
@@ -187,7 +187,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Decorative Bottom Label */}
-                    <div className="absolute bottom-3 right-6 text-[10px] font-mono text-neutral-400 uppercase tracking-widest pointer-events-none">
+                    <div className="absolute bottom-2 right-4 text-[10px] font-mono text-neutral-400 uppercase tracking-widest pointer-events-none">
                         Fig {activeTab + 1}.0
                     </div>
                 </div>
