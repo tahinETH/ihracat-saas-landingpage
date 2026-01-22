@@ -5,7 +5,7 @@ import { ArrowRight, Terminal } from "lucide-react"
 
 export default function CTASection() {
   return (
-    <section id="cta" className="relative mx-auto grid h-auto w-full grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-6 my-20 bg-transparent px-4 lg:px-9 first:mt-4 lg:mt-20 lg:mb-30">
+    <section id="cta" className="relative mx-auto grid h-auto w-full grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-6 my-20 bg-[#F1F1EF] px-4 lg:px-9 first:mt-4 lg:mt-20 lg:mb-30">
       
       {/* Top Border Line */}
       <div className="col-span-full border-t border-neutral-200 dark:border-neutral-800 pt-12" />

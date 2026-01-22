@@ -43,7 +43,7 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="relative mx-auto grid h-auto w-full grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-6 my-20 bg-transparent px-4 lg:px-9">
+    <section id="faq" className="relative mx-auto grid h-auto w-full grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-6 my-20 bg-[#F8F8F6] px-4 lg:px-9">
       
       {/* Top Border */}
       <div className="col-span-full border-t border-neutral-200 dark:border-neutral-800 pt-4 mb-8" />

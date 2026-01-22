@@ -31,7 +31,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative mx-auto grid h-auto w-full grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-6 my-20 bg-transparent px-4 lg:px-9">
+    <section id="how-it-works" className="relative mx-auto grid h-auto w-full grid-cols-4 gap-x-4 lg:grid-cols-12 lg:gap-x-6 my-20 bg-[#F6F6F4] px-4 lg:px-9">
       
       {/* Top Border */}
       <div className="col-span-full border-t border-neutral-200 dark:border-neutral-800 pt-4 mb-8" />
